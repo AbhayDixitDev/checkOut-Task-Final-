@@ -1,4 +1,4 @@
-# React + Vite + Redux + React-Redux + Redux-Thunk + Redux-Logger + Stripe + Bootstrap + React-Bootstrap + React-Router-Dom + React-Icons
+# React + Vite + Redux + React-Redux  + Stripe + Bootstrap + React-Bootstrap + React-Router-Dom + React-Icons + Express + MongoDB
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -74,3 +74,13 @@ The template also includes the following features:
 1. Install React-Icons using npm or yarn
 2. Import React-Icons in your React component using the following line of code: `import { FaHome, FaLaptop, FaMobileAlt, FaShoppingCart } from "react-icons/fa";`
 3. Use React-Icons in your React component to add icons to your HTML elements
+
+### How to use Express + MongoDB for backend
+
+1. Install Express and MongoDB using npm or yarn
+2. Create a new file in the `server` directory called `index.js`
+3. Import Express and MongoDB in the `index.js` file using the following lines of code: `const express = require('express');` and `const mongoose = require('mongoose');`
+4. Create a new Express app using the following line of code: `const app = express();`
+5. Connect to MongoDB using the following line of code: `mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });`
+6. Define routes for your Express app using the following line of code: `app.get('/', (req, res) => { res.send('Hello World!'); });`
+7. Start the Express app using the following line of code: `app.listen(process.env.PORT || 5000, () => { console.log('Example app listening on port 5000'); });`
