@@ -1,8 +1,9 @@
 {
-  "name": "add-to-cart-using-redux",
+  "name": "Cart and Checkout System",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Abhay Dixit",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
