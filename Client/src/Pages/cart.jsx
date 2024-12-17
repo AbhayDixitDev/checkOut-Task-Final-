@@ -40,7 +40,7 @@ const Cart = () => {
         <Col>
           <Card.Footer style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
             <span style={{fontWeight: 'bold', fontSize: '1.2rem'}}>Total Amount: Rs. {totalAmount} <FaRupeeSign style={{fontSize: '1.2rem'}} /> 
-            <Button variant="success" size="sm" onClick={()=>navigate('/checkout')} style={{fontSize: '1.2rem',marginLeft:"200px", fontWeight: 'bold'}}>Checkout</Button>
+            {cart.length > 0 ? <Button variant="success" size="sm" onClick={()=>navigate('/checkout')} style={{fontSize: '1.2rem',marginLeft:"200px", fontWeight: 'bold'}}>Checkout</Button> : <Button variant="warning" size="sm" onClick={()=>navigate('/')} style={{fontSize: '1.2rem',marginLeft:"200px", fontWeight: 'bold'}}>Add items to checkout</Button>}
             </span>
           </Card.Footer>
         </Col>
