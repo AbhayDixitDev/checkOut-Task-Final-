@@ -1,15 +1,18 @@
-# React + Vite
+# React + Vite + Redux + React-Redux + Redux-Thunk + Redux-Logger + Stripe + Bootstrap + React-Bootstrap + React-Router-Dom + React-Icons
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## React + Vite + Redux
-
-This template is an extension of the above template and adds the following features:
+The template also includes the following features:
 
 - Redux for state management
 - React-Redux for connecting React components to the Redux store
 - Redux-Thunk for handling asynchronous actions
 - Redux-Logger for logging Redux actions and state changes
+- Stripe for handling payments
+- Bootstrap for styling HTML elements
+- React-Bootstrap for styling React components
+- React-Router-Dom for routing
+- React-Icons for adding icons to React components
 
 ### How to use
 
@@ -37,11 +40,6 @@ This template is an extension of the above template and adds the following featu
 
 1. Add the Redux-Logger middleware to your Redux store by adding the following line of code to your `src/store.js` file: `const store = createStore(reducer, applyMiddleware(logger))`
 2. The logger will now log all Redux actions and state changes to the console
-
-### How to use React-Redux
-
-1. Connect your React component to the Redux store using the `connect` function from `react-redux`
-2. Use the `useSelector` hook from `react-redux` to access the state of the Redux store in your React component
 
 ### How to use Stripe
 
