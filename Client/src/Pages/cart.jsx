@@ -20,22 +20,17 @@ const Cart = () => {
 
   return (
     <Container fluid className='px-4 mt-4'>
-      <Row className='g-4' xs={1} sm={2} md={3} lg={6}>
+      <Row className='g-4' xs={1} sm={2} md={3} lg={6} style={{padding: '10px'}}>
         {cart.map((item) => (
-          <Col key={item.id} className="d-flex">
-            <Card style={{ flex: '1 1 auto', border: '1px solid lightgray' }}>
-              <Card.Header style={{display: 'flex', justifyContent: 'space-between'}}>
-                <Card.Title>{item.name}</Card.Title>
-                <Button variant="danger" size="sm" onClick={() => handleRemoveFromCart(item)}><FaTrash /></Button>
+          <Col key={item.id} className="d-flex" style={{padding: '10px', margin: '10px'}}>
+            <Card style={{ flex: '1 1 auto', border: '1px solid lightgray', borderRadius: '10px' }}>
+              <Card.Header style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px', background: '#f7f7f7'}}>
+                <Card.Title style={{marginRight: '10px', fontSize: '1.2rem'}}>{item.name}</Card.Title>
+                <Button variant="danger" size="sm" onClick={() => handleRemoveFromCart(item)} style={{marginLeft: 'auto', padding: '10px 20px', fontSize: '1.2rem'}}><FaTrash style={{fontSize: '1.5rem', marginRight: '10px'}} /></Button>
               </Card.Header>
-              <Card.Img variant="top" src={item.image} style={{width: '100%', height: '150px'}} />
-              <Card.Footer style={{display: 'flex', justifyContent: 'space-between'}}>
-                <Card.Text>Rs. {item.quantity * item.price}</Card.Text>
-                <Card.Text>Quantity: 
-                    <button onClick={()=>dispatch(descrementQnty(item.id))}>-</button>
-                    {item.quantity}
-                    <button onClick={()=>dispatch(incrementQnty(item.id))}>+</button>
-                    </Card.Text>
+              <Card.Img variant="top" src={item.image} style={{width: '100%', height: '150px', padding: '10px', objectFit: 'cover', borderRadius: '10px 10px 0 0'}} />
+              <Card.Footer style={{display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '10px', background: '#f7f7f7', borderRadius: '0 0 10px 10px'}}>
+                <Card.Text style={{fontSize: '1.2rem'}}>Rs.{item.quantity * item.price} <br/> Quantity: <button style={{padding: '5px 5px', background: '#fff', border: '1px solid lightgray', borderRadius: '5px',marginLeft: '10px', marginRight: '10px'}} onClick={()=>dispatch(descrementQnty(item.id))}>-</button>{item.quantity}<button style={{padding: '5px 5px', background: '#fff', border: '1px solid lightgray', borderRadius: '5px',marginRight: '10px', marginLeft: '10px'}} onClick={()=>dispatch(incrementQnty(item.id))}>+</button></Card.Text>
               </Card.Footer>
             </Card>
           </Col>

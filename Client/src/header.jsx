@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Navbar, Nav, Container, Badge } from "react-bootstrap";
-import { FaHome, FaLaptop, FaMobileAlt, FaShoppingCart } from "react-icons/fa";
+import { FaHome, FaLaptop, FaMobileAlt, FaShoppingCart, FaBook } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 const Header = () => {
@@ -28,6 +28,23 @@ const Header = () => {
             <Nav.Link as={Link} to="/mobile">
               <FaMobileAlt style={{ marginRight: 5 }} />
               Mobile
+            </Nav.Link>
+            <Nav.Link
+              onClick={(e) => {
+                e.preventDefault();
+                if (
+                  window.confirm(
+                    "Are you sure you want to go to Magnet Brains?"
+                  )
+                ) {
+                  window.open("https://www.magnetbrains.com/", "_blank");
+                }
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <FaMobileAlt style={{ marginRight: 5, display: "none" }} />
+              <FaBook style={{ marginRight: 5 }} />
+              Magnet Brains
             </Nav.Link>
           </Nav>
           <Nav>

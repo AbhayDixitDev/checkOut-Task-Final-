@@ -74,7 +74,7 @@ const Checkout = () => {
           setSuccess(
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,1)', zIndex: 9999 }}>
               <h1 className="display-1 text-success text-center" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>Thank you for shopping with us!</h1>
-              <h3>You will be redirected to the home page in 3 seconds</h3>
+              <h3>You will be redirected to the home page in 3,2,1</h3>
             </div>
           );
         }, 5000);

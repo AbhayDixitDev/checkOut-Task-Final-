@@ -9,12 +9,14 @@ const cartSlice = createSlice({
     reducers: {
         addToCart(state, action) {
             const itemInCart = state.data.find((item) => item.id === action.payload.id);
+           
             if (itemInCart) {
                 itemInCart.quantity += 1;
                 message.warning("Item already in cart");
                 return;
             }
             state.data.push(action.payload);
+            message.success("Item added to cart");
         },
         removeFromCart(state, action) {
             state.data = state.data.filter((item) => item.id !== action.payload);
