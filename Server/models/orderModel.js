@@ -23,7 +23,9 @@ const orderSchema = mongoose.Schema(
        totalPrice :{type: Number, required: true},
        dateOfOrder : {type: Date, default: Date.now()},
        paymentType : {type: String, required: true, default: "Online Using Stripe"},
-       paymentStatus : {type: String, required: true}
+       paymentStatus : {type: String, required: true},
+       transactionId : {type: String, required: true}
+       
     }
 )
 

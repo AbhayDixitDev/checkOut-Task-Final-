@@ -7,6 +7,8 @@ import Mobile from "./Pages/mobile"
 import Cart from "./Pages/cart"
 import Checkout from "./Pages/checkout"
 import Payment from "./Pages/payment"
+import Success from "./Pages/Success"
+import Failed from "./Pages/Failed"
 
 const App=()=> {
   return (
@@ -21,6 +23,8 @@ const App=()=> {
           <Route path="/cart" element={<div><Cart /></div>} />
           <Route path="/checkout" element={<div><Checkout /></div>} />
           <Route path="/payment"  element={<div><Payment/></div>} />
+          <Route path="/success"  element={<div><Success/></div>} />
+          <Route path="/failed"  element={<div><Failed/></div>} />
         </Route>
       </Routes>
     </BrowserRouter>
